@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header><h2>Formulario</h2></header>
+    <form action="" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre_usuario"><br>
+        <br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña_usuario"><br>
+        <a class="link" href="https://www.google.com">Recuperar contraseña</a><br>
+        <br>
+        <button type="submit">enviar</button>
+    </form>
+</body>
+
+
+<style>
+    body{
+        background-color: aqua;
+    }
+    header{
+        position: absolute;
+        top: 5%;
+        left: 40%;
+        text-decoration: underline;
+    }
+    form{
+        display: grid;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+        left:40%;
+    }
+    button{
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: rgb(196, 173, 173);
+    }
+</style>
+</html>

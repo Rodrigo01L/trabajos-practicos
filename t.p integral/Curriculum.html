@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <header><h1>Curriculum Vitae</h1></header>
+
+    <form action="" method="post">
+        <div class="datos-personales">
+            <h2>Datos Personales</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nom_user" placeholder="ingrese su nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="ape_user" placeholder="ingrese su apellido" required><br>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad_user" placeholder="ingrese su edad" required>
+            <label for="nacim">Fecha de nacimiento:</label>
+            <input type="text" id="nacim" name="nacim_user" placeholder="dd/mm/aaaa" required><br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email_user" placeholder="ingrese su email" required>
+            <label for="numero">Numero de contacto:</label>
+            <input type="text" id="numero" name="num_user" placeholder="celular" required>
+            <label for="dni">Numero de documento</label>
+            <input type="text" id="dni" name="dni_user" placeholder="Documento" required><br>
+            <br>
+            <label for="nacionalidad">Nacionalidad</label>
+            <input type="text" id="nacionalidad" name="nac_user" placeholder="Pais de nacimiento" required>
+            <label for="domicilio">Domicilio actual</label>
+            <input type="text" id="domicilio" name="dom_user" placeholder="Domicilio" required>
+            <label for="localidad">Localidad</label>
+            <input type="text" id="localidad" name="loc_user" placeholder="Localidad" required>
+            <div class="image">
+                <h4>ingrese su archivo de imagen</h4>
+                <input type="file" name="fotodni" id="imageper">
+            </div>
+        </div>
+        <div class="info-academica">
+            <h2>Informacion Academica</h2>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Estudios:</legend>
+                    <select name="estudios" id="li-est">
+                        <option value="val-a">Primaria</option>
+                        <option value="val-b">Secundaria</option>
+                        <option value="val-c">Universitario</option>
+                        <option value="val-d">Terciaria</option>
+
+                        <div class="radio-btn">
+                                <input type="radio" id="r-box" name="estado" value="en-curso" checked>
+                                <label for="r-box">En curso</label>
+                                <input type="radio" id="r-box" name="estado" value="terminado">
+                                <label for="r-box">Terminado</label>
+                                <input type="radio" id="r-box" name="estado" value="incompleto">
+                                <label for="r-box">Incompleto</label>
+                        </div>
+                    </select>
+                </fieldset>
+                <div class="idiomas">
+                    <h4>Idiomas</h4>
+                    <label for="idiomas">Español:</label>
+                    <select id="idiomas" name="li-idi-es">
+                        <option value="opt">...</option>
+                        <option value="nativo">Nativo</option>
+                        <option value="nativo">Intermedio</option>
+                        <option value="nativo">Avanzado</option>
+                    </select>
+                    <label for="idiomas">Ingles:</label>
+                    <select id="idiomas" name="li-idi-es">
+                        <option value="opt">...</option>
+                        <option value="nativo">Nativo</option>
+                        <option value="nativo">Intermedio</option>
+                        <option value="nativo">Avanzado</option>
+                    </select>
+                    <label for="otr">Otro:</label>
+                    <input type="text" id="otro" placeholder="indique cual otro sabe">
+                </div>
+            </form>
+        </div>
+        <div class="exp-laboral">
+            <h2>Experiencia laboral</h2>
+            <label for="puesto">Puesto</label>
+            <input type="text" name="puesto" id="puesto" placeholder="ej:Operario">
+            <label for="empresa">Empresa</label>
+            <input type="text" name="empresa" id="empresa" placeholder="ej:COTO">
+            <label for="pos">Posicion</label>
+            <select id="pos" name="li-pos">
+                <option value="opt">...</option>
+                <option value="aprendiz">Aprendiz</option>
+                <option value="junior">junior</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="jefe">Jefe</option>
+            </select>
+            <br>
+            <br><textarea name="exp-ta" id="exp-area" rows="6" cols="100" placeholder="Comentarios:"></textarea>
+        </div>
+        <div class="referencias">
+            <h2>Referencias</h2>
+            <label for="refe1">Referencia</label>
+            <input type="text" id="refe1" name="refe1" placeholder="Nombre de referencia">
+            <label for="ref-con1">Numero de Contacto</label>
+            <input type="text" id="ref-con1" name="contacto1" placeholder="Numero de celular">
+            <br><br>
+            <label for="refe2">Referencia 2</label>
+            <input type="text" id="refe2" name="refe2" placeholder="Nombre de referencia">
+            <label for="refcon2">Numero de Contacto</label>
+            <input type="text" id="refcon2" name="contacto2" placeholder="Numero de celular">
+        </div>
+        <button>enviar</button>
+    </form>
+</body>
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-color: cadetblue;
+    }
+    header{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        border: solid 2px black;
+        background-color: rgb(228, 209, 209);
+        height: auto;
+        width: 500px;
+        border-radius: 300px;
+    }
+    h2{
+        color: rgb(79, 54, 223);
+    }
+    form{
+        display: contents;
+        justify-content: flex-start;
+    }
+    label{
+        width: 90px;
+        font-weight: bold;
+        display: inline-block;
+    }
+    input[type="text"], input[type="email"]{
+        width: 180px;
+        padding: 3px 10px;
+        border: 1px solid grey;
+        margin: 2px 0;
+        display: inline-block;
+    }
+    textarea{
+        width: auto;
+        height: auto;
+        border: 1px solid grey;
+        margin: 8px 0;
+        resize: none;
+        display: block;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        color:black;
+        font-size: 20px;
+        background-color: white;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+</style>
+</html>
